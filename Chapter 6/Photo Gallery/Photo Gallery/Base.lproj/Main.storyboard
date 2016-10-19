@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="UyP-7D-SnE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="08l-jU-6nW">
+            <objects>
+                <tableViewController id="UyP-7D-SnE" customClass="TableViewController" customModule="Photo_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="40" sectionFooterHeight="40" id="tQz-hA-65o">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="gTo-ub-7zE" detailTextLabel="rgc-5u-eis" style="IBUITableViewCellStyleSubtitle" id="H2G-ye-6u4">
+                                <rect key="frame" x="0.0" y="54" width="1880" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H2G-ye-6u4" id="Rrv-GB-Rd8">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gTo-ub-7zE">
+                                            <rect key="frame" x="20" y="4" width="72" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rgc-5u-eis">
+                                            <rect key="frame" x="20" y="50" width="128" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="XQr-Dc-78i" kind="show" identifier="SelectAlbumSegue" id="2Nq-Ij-0qO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UyP-7D-SnE" id="KMx-Bd-yuv"/>
+                            <outlet property="delegate" destination="UyP-7D-SnE" id="mHF-Qd-RDI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HEb-OE-9dd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1290" y="77"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="VX5-5i-E4c">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="XQr-Dc-78i" customClass="PageViewController" customModule="Photo_Gallery" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBh-nM-6RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="77"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="toz-48-XRt">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="Ecd-jw-q7I" customClass="PageContentViewController" customModule="Photo_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FFG-Tc-oJy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tt8-Um-x4d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l1x-Tf-yIO">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-6A-QQf">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="Tt8-Um-x4d" firstAttribute="top" secondItem="qDl-6A-QQf" secondAttribute="bottom" id="2ht-fQ-odR"/>
+                            <constraint firstAttribute="trailing" secondItem="qDl-6A-QQf" secondAttribute="trailing" id="77E-dB-1y1"/>
+                            <constraint firstItem="qDl-6A-QQf" firstAttribute="leading" secondItem="l1x-Tf-yIO" secondAttribute="leading" id="MwI-Os-B6H"/>
+                            <constraint firstItem="qDl-6A-QQf" firstAttribute="top" secondItem="FFG-Tc-oJy" secondAttribute="bottom" id="t5E-kD-Fhi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qDl-6A-QQf" id="53U-6h-K9a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOc-Ce-Dw2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="1234"/>
+        </scene>
+    </scenes>
+</document>
